@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Business Card</title>
+        <link rel="stylesheet" href=".\css\style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
+        <script src=".\js\index.js"></script>
+    </head>
+    <body>
+        <header class="header">
+                <div class="header__logo">
+                    <img src=".\images\Linde_logo.png" alt="logo"/>
+                </div>
+                <div class="header__title">
+                    <h1>Business Card</h1>
+                </div>
+        </header>
+        <div class="card">
+            <div class="column1">
+                <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__480.png" alt="profile" />
+                <h3 class="overlay-info">
+                    <p id="name">Name</p>
+                    <p id="designation">Designation</p>
+                </h3>
+            </div>
+            <div class="column2">
+                <div class="Info-section">
+                    <h3>Personal Info</h3>
+                    <ul>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <span>Phone:</span>
+                            <span id="phone">1234567890</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                mail
+                        </span>
+                            <span>Email:</span>
+                            <span id="email">abc@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <span>Address:</span>
+                            <span id="address">123, street</span>
+                        </li>
+                    </ul> 
+                    <div class="Button-section">
+                        <button class="btn" onclick="ToCall()">Call</button>
+                        <button class="btn" onclick="ToEmail()">Send Email</button>
+                        <button class="btn" onclick="CreateVcard()">Save Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
