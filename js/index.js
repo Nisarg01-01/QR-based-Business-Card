@@ -59,10 +59,11 @@ function GoToLocation(){
 // function to create vcard and save it
 function CreateVcard(){
     var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nORG: "+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
-    // var blob = new Blob([vcard], {type: "text/plain;charset=utf-8"});
-    // var link = document.createElement('a'); 
-    // link.href = window.URL.createObjectURL(blob);
-    // link.download = fullname+".vcf";
-    // link.click();
-    window.open("contacts://", vcard);
+    var blob = new Blob([vcard], {type: "text/vcard"});
+    var link = document.createElement('a'); 
+    link.href = window.URL.createObjectURL(blob);
+    link.download = fullname+".vcf";
+    link.click();
+    window.URL.revokeObjectURL(link.href); 
+    link.remove();
 }
