@@ -64,5 +64,5 @@ function CreateVcard(){
     link.href = window.URL.createObjectURL(blob);
     link.download = fullname+".vcf";
     link.click();
-    navigator.app.loadUrl("file:///" + contact.name + ".vcf", { openExternal: true });
+    navigator.app.loadUrl("file:///" + fullname + ".vcf", { openExternal: true });
 }
