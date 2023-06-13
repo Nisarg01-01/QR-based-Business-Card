@@ -64,13 +64,5 @@ function CreateVcard(){
     link.href = window.URL.createObjectURL(blob);
     link.download = fullname+".vcf";
     link.click();
-    navigator.contacts.create({
-        displayName: contact.name,
-        phoneNumbers: [{ value: contact.phone }],
-        emails: [{ value: contact.email }]
-      }).then(function(contact) {
-        // The vCard file has been opened in the contacts app.
-      }).catch(function(error) {
-        // An error occurred opening the vCard file.
-      });
+    window.open("contacts://", "_self");
 }
