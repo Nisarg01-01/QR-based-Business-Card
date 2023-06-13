@@ -49,6 +49,8 @@ function ToEmail(){
     window.open("mailto:"+email);
 }
 
+// 
+
 // function on click uses address and prompts to open in maps
 function GoToLocation(){
     window.open("https://www.google.com/maps/search/?api=1&query="+address);
@@ -57,9 +59,10 @@ function GoToLocation(){
 // function to create vcard and save it
 function CreateVcard(){
     var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nORG: "+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
-    var blob = new Blob([vcard], {type: "text/plain;charset=utf-8"});
-    var link = document.createElement('a'); 
-    link.href = window.URL.createObjectURL(blob);
-    link.download = fullname+".vcf";
-    link.click();
+    // var blob = new Blob([vcard], {type: "text/plain;charset=utf-8"});
+    // var link = document.createElement('a'); 
+    // link.href = window.URL.createObjectURL(blob);
+    // link.download = fullname+".vcf";
+    // link.click();
+    window.open("data:text/vcard;charset=utf-8," + escape(vcard));
 }
