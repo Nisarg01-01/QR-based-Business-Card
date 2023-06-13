@@ -64,5 +64,5 @@ function CreateVcard(){
     link.href = window.URL.createObjectURL(blob);
     link.download = fullname+".vcf";
     link.click();
-    window.open("contacts://", "_self");
+    window.open("contacts://", vcard);
 }
