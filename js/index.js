@@ -25,7 +25,7 @@ function GetCurrentUrl() {
     // assign the data to the variables 
     fullname = data.split('&')[0].split('=')[1];
     designation = data.split('&')[1].split('=')[1];
-    company
+    company = data.split('&')[2].split('=')[1];
     phone = data.split('&')[3].split('=')[1];
     email = data.split('&')[4].split('=')[1];
     address = data.split('&')[5].split('=')[1];
@@ -54,9 +54,9 @@ function ToEmail(){
 
 // 
 
-// function on click uses address and prompts to open in maps with the address
+// function on click uses address and prompts to open in maps
 function GoToLocation(){
-    window.open("https://www.google.com/maps/place/"+address);
+    // window.open("https://www.google.com/maps/search/?api=1&query="+address);
 }
 
 // function to create vcard and save it
