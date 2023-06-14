@@ -54,9 +54,9 @@ function ToEmail(){
 
 // 
 
-// function on click uses address and prompts to open in maps
+// function on click uses address and prompts to open in maps with the address
 function GoToLocation(){
-    window.open("https://www.google.com/maps/search/?api=1&query="+address);
+    window.open("https://www.google.com/maps/place/"+address);
 }
 
 // function to create vcard and save it
