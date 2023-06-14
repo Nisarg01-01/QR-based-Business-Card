@@ -21,7 +21,6 @@ function GetCurrentUrl() {
     // decode the data
     data = urlParams.get('data');
     data = atob(data);
-
     // assign the data to the variables 
     fullname = data.split('&')[0].split('=')[1];
     designation = data.split('&')[1].split('=')[1];
@@ -29,6 +28,12 @@ function GetCurrentUrl() {
     phone = data.split('&')[3].split('=')[1];
     email = data.split('&')[4].split('=')[1];
     address = data.split('&')[5].split('=')[1];
+    console.log(fullname);
+    console.log(designation);
+    console.log(company);
+    console.log(phone);
+    console.log(email);
+    console.log(address);
 }
 
 
@@ -36,16 +41,10 @@ function DisplayData(){
     GetCurrentUrl();
     document.getElementById("name").innerHTML = fullname;
     document.getElementById("designation").innerHTML = designation;
-    document.getElementById("company").innerHTML = company
+    document.getElementById("company").innerHTML = company;
     document.getElementById("address").innerHTML = address;
     document.getElementById("phone").innerHTML = phone;
     document.getElementById("email").innerHTML = email;
-    console.log(fullname);
-    console.log(designation);
-    console.log(company);
-    console.log(phone);
-    console.log(email);
-    console.log(address);
 }
 
 // function on click uses phone and prompts to call
