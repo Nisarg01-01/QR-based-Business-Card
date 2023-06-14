@@ -6,7 +6,7 @@ designation = "Intern at digitalization"
 company = "Linde Enigneering India Pvt. Ltd."
 phone = "8849904363"
 email = "nisargshah@gmail.com"
-address = "Vadodara,Gujarat"
+address = "\"Linde House\", Near Nilamber Circle, Vasna Gotri Road, Vasna, Vadodara- 391 410, Gujarat, India"
 
 # creare a string to store data in url format
 data = "name="+name+"&designation="+designation+"&phone="+phone+"&email="+email+"&address="+address
