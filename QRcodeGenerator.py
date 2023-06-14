@@ -10,6 +10,7 @@ address = "Linde House, Near Nilamber Circle, Vasna Gotri Road, Vasna, Vadodara-
 
 # creare a string to store data in url format
 data = "name="+name+"&designation="+designation+"&company="+company+"&phone="+phone+"&email="+email+"&address="+address
+print(data)
 
 # encode it with pybase64
 import pybase64

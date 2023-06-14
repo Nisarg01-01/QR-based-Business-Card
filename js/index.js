@@ -40,6 +40,12 @@ function DisplayData(){
     document.getElementById("address").innerHTML = address;
     document.getElementById("phone").innerHTML = phone;
     document.getElementById("email").innerHTML = email;
+    console.log(fullname);
+    console.log(designation);
+    console.log(company);
+    console.log(phone);
+    console.log(email);
+    console.log(address);
 }
 
 // function on click uses phone and prompts to call
@@ -56,7 +62,7 @@ function ToEmail(){
 
 // function on click uses address and prompts to open in maps
 function GoToLocation(){
-    // window.open("https://www.google.com/maps/search/?api=1&query="+address);
+    window.open("https://www.google.com/maps/search/?api=1&query="+address);
 }
 
 // function to create vcard and save it
