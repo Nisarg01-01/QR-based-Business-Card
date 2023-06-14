@@ -4,6 +4,7 @@ window.onload = function() {
 
 let fullname;
 let designation;
+let company;
 let phone;
 let email;
 let address;
@@ -24,9 +25,10 @@ function GetCurrentUrl() {
     // assign the data to the variables 
     fullname = data.split('&')[0].split('=')[1];
     designation = data.split('&')[1].split('=')[1];
-    phone = data.split('&')[2].split('=')[1];
-    email = data.split('&')[3].split('=')[1];
-    address = data.split('&')[4].split('=')[1];
+    company
+    phone = data.split('&')[3].split('=')[1];
+    email = data.split('&')[4].split('=')[1];
+    address = data.split('&')[5].split('=')[1];
 }
 
 
@@ -34,6 +36,7 @@ function DisplayData(){
     GetCurrentUrl();
     document.getElementById("name").innerHTML = fullname;
     document.getElementById("designation").innerHTML = designation;
+    document.getElementById("company").innerHTML = company
     document.getElementById("address").innerHTML = address;
     document.getElementById("phone").innerHTML = phone;
     document.getElementById("email").innerHTML = email;
@@ -58,7 +61,9 @@ function GoToLocation(){
 
 // function to create vcard and save it
 function CreateVcard(){
-    var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nORG: "+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
+    // var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nORG: "+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
+    // create a vcard with org as company and nickname as designation both are compulsory fields
+    var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nNICKNAME:"+designation+"\nORG: "+company+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";        
     var blob = new Blob([vcard], {type: "text/vcard"});
     var link = document.createElement('a'); 
     link.href = window.URL.createObjectURL(blob);

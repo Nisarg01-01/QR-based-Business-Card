@@ -3,6 +3,7 @@ import cv2
 
 name = "Nisarg"
 designation = "Intern at digitalization"
+company = "Linde Enigneering India Pvt. Ltd."
 phone = "8849904363"
 email = "nisargshah@gmail.com"
 address = "Vadodara,Gujarat"
