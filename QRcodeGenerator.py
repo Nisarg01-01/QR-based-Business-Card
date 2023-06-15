@@ -11,7 +11,7 @@ email = "nisargshah@gmail.com"
 address = "Linde House, Near Nilamber Circle, Vasna Gotri Road, Vasna, Vadodara- 391 410, Gujarat, India"
 
 # creare a string to store data in url format with first name, last name, fullname, designation, company, phone, email, address
-data = "fname="+fname+"&lname="+lname+"&fullname="+fullname+"&designation="+designation+"&company="+company+"&phone="+phone+"&email="+email+"&address="+address
+data = "fname="+fname+"&lname="+lname+"&designation="+designation+"&company="+company+"&phone="+phone+"&email="+email+"&address="+address
 print(data)
 
 # encode it with pybase64

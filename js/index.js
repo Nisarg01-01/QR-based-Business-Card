@@ -24,12 +24,12 @@ function GetCurrentUrl() {
     // assign the data to the variables 
     fname = data.split('&')[0].split('=')[1];
     lname = data.split('&')[1].split('=')[1];
-    fullname = data.split('&')[2].split('=')[1];
-    designation = data.split('&')[3].split('=')[1];
-    company = data.split('&')[4].split('=')[1];
-    phone = data.split('&')[5].split('=')[1];
-    email = data.split('&')[6].split('=')[1];
-    address = data.split('&')[7].split('=')[1];
+    fullname = fname+" "+lname;
+    designation = data.split('&')[2].split('=')[1];
+    company = data.split('&')[3].split('=')[1];
+    phone = data.split('&')[4].split('=')[1];
+    email = data.split('&')[5].split('=')[1];
+    address = data.split('&')[6].split('=')[1];
     console.log(fname);
     console.log(lname);
     console.log(fullname);
