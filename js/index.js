@@ -78,9 +78,4 @@ function CreateVcard(){
     link.href = window.URL.createObjectURL(blob);
     link.download = fullname+".vcf";
     link.click();
-    window.URL.revokeObjectURL(link.href); 
-    link.remove();
-    var intent = new Intent(Intent.ACTION_VIEW);
-    intent.setDataAndType(Uri.parse(vcardData), "text/x-vcard");
-    startActivity(intent);
 }

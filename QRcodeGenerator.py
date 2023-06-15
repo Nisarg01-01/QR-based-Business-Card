@@ -20,4 +20,5 @@ data = pybase64.b64encode(data.encode("ascii")).decode("ascii")
 
 qrCode=qrcode.make('https://nisarg01-01.github.io/QR-based-Business-Card/?data='+data, version=1, box_size=10, border=5)
 qrCode.save('D:\\Codes\\Projects\\QR-based-Business-Card\\MyLink.png')
-# print with local host url
+# print url
+print('https://nisarg01-01.github.io/QR-based-Business-Card/?data='+data)
