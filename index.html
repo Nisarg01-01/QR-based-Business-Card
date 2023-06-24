@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
         <title>Business Card</title>
         <link rel="stylesheet" href=".\css\style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
@@ -12,12 +13,9 @@
     </head>
     <body>
         <header class="header">
-                <div class="header__logo">
+            <div class="header__logo">
                     <img src=".\images\Linde_logo.png" alt="logo"/>
-                </div>
-                <div class="header__title">
-                    <h1>Business Card</h1>
-                </div>
+            </div>
         </header>
         <div class="card">
             <div class="column1">
@@ -33,31 +31,39 @@
                     <ul>
                         <li>
                             <span class="material-symbols-outlined">
+                                work
+                            </span>
+                            <span>Company: </span>
+                            <span id="company"> Linde</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
                                 call
                             </span>
-                            <span>Phone:</span>
+                            <span>Phone: </span>
                             <span id="phone">1234567890</span>
                         </li>
                         <li>
                             <span class="material-symbols-outlined">
                                 mail
                         </span>
-                            <span>Email:</span>
+                            <span>Email: </span>
                             <span id="email">abc@gmail.com</span>
                         </li>
                         <li>
                             <span class="material-symbols-outlined">
                                 location_on
                             </span>
-                            <span>Address:</span>
+                            <span>Address: </span>
                             <span id="address">123, street</span>
                         </li>
                     </ul> 
                     <div class="Button-section">
                         <button class="btn" onclick="ToCall()">Call</button>
-                        <button class="btn" onclick="ToEmail()">Send email</button>
-                        <button class="btn" onclick="CreateVcard()">Save It</button>
-                </div>
+                        <button class="btn" onclick="ToEmail()">Send Email</button>
+                        <button class="btn" onclick="CreateVcard()">Save Contact</button>
+                        <button class="btn" onclick="GoToLocation()">Location</button>
+                    </div>
             </div>
         </div>
     </div>

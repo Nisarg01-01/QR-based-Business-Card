@@ -33,20 +33,13 @@ h1{
 
 .header{
     background-color: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 2rem;
+    text-align: end;
 }
 
 .header__logo img {
-    width: 37.5%;
+    width: 12%;
     height: 18.75%;
-}
-
-.header__title h1{
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 /* The Digital Card Section */
@@ -78,7 +71,6 @@ h1{
     border-style: solid;
     border-width: 0.2rem;
     width: 75%;
-    height: 60%;
 }
 
 .overlay-info {
@@ -92,7 +84,7 @@ h1{
 
 .overlay-info p{
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
@@ -110,7 +102,7 @@ h1{
 }
 
 .Info-section ul li span{ 
-    font-size: 1rem;
+    font-size: 1.25em;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -135,7 +127,7 @@ h1{
 }
 
 .btn {
-    width: 25%;
+    width: 24%;
     font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
@@ -162,11 +154,7 @@ h1{
         padding: 0 1rem;
     }
     .header__logo img{
-        width: 50%;
-        height: 25%;
-    }
-    .header__title h1{
-        font-size: 2rem;
+        width: 12%;
     }
     .card{
         padding: 7rem 0;
@@ -189,7 +177,7 @@ h1{
         font-size: 5rem;
     }
     .btn{
-        width: 25%;
+        width: 24%;
         font-size: 1.7rem;
     }
 }
@@ -204,11 +192,8 @@ h1{
         padding: 0rem;
     }
     .header__logo img{
-        width: 50%;
+        width: 35%;
 
-    }
-    .header__title h1{
-        font-size: 2rem;
     }
     .column1{
         width: 100%;
