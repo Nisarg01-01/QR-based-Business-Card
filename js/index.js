@@ -30,14 +30,6 @@ function GetCurrentUrl() {
     phone = data.split('&')[4].split('=')[1];
     email = data.split('&')[5].split('=')[1];
     address = data.split('&')[6].split('=')[1];
-    console.log(fname);
-    console.log(lname);
-    console.log(fullname);
-    console.log(designation);
-    console.log(company);
-    console.log(phone);
-    console.log(email);
-    console.log(address);
 }
 
 
@@ -70,8 +62,6 @@ function GoToLocation(){
 
 // function to create vcard and save it
 function CreateVcard(){
-    // var vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:"+fullname+"\nORG: "+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
-    // create a vcard with org as company and nickname as designation both are compulsory fields
     var vcard = "BEGIN:VCARD\nVERSION:3.0\nN:"+lname+";"+fname+"\nFN:"+fullname+"\nORG:"+company+"\nTITLE:"+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
     var blob = new Blob([vcard], {type: "text/vcard"});
     var link = document.createElement('a'); 

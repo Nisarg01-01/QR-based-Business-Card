@@ -1,6 +1,7 @@
 import qrcode
 import cv2
 
+# Personal Details to be stored in QR code
 fname = "Tejas"
 lname = "Mehta"
 designation = "Dy. Manager Digitalization"
@@ -15,8 +16,8 @@ data = "fname="+fname+"&lname="+lname+"&designation="+designation+"&company="+co
 # encode it with pybase64
 import pybase64
 data = pybase64.b64encode(data.encode("ascii")).decode("ascii")
+print('https://nisarg01-01.github.io/QR-based-Business-Card/?data='+data)
 
+# save the qr code in png format
 qrCode=qrcode.make('https://nisarg01-01.github.io/QR-based-Business-Card/?data='+data, version=1, box_size=10, border=5, error_correction=qrcode.constants.ERROR_CORRECT_M)
 qrCode.save('D:\\Codes\\Projects\\QR-based-Business-Card\\MyLink.png')
-# save the qrcode in svg format
-# qrCode.save('D:\\Codes\\Projects\\QR-based-Business-Card\\MyLink.svg')

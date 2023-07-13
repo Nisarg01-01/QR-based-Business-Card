@@ -65,6 +65,7 @@ h1{
     width: 67%;
 }
 
+/* Profile Image */
 
 .column1 img {
     border-color: black;
@@ -87,6 +88,8 @@ h1{
     font-size: 1.25rem;
     font-weight: 500;
 }
+
+/* Personal Information Seciton */
 
 .Info-section h3{
     font-size: 1.5rem;
@@ -145,6 +148,8 @@ h1{
 
 /* media queries style */
 
+/* This Section contain the properties for max with 1280 pixels Landscape mode in tablets or ipads*/
+
 @media (max-width:1280px){
     /* Reduce font of all text */
     html{
@@ -181,6 +186,9 @@ h1{
         font-size: 1.7rem;
     }
 }
+
+
+/* This Section contain the properties for max with 980 pixels */
 
 @media (max-width: 980px){
     .card{
