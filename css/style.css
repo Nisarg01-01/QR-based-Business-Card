@@ -11,8 +11,10 @@
     /* 1rem = 10px */
 }
 
+/* Setting the variables for colors */
+
 :root{
-    --primary-color: #015591;
+    --primary-color: #015591; 
     --header-color: #1ba9e4;
     --bg-color: #eaf0f3;
 }

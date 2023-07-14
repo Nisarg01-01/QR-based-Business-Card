@@ -1,7 +1,9 @@
+// onload function to call the display data function
 window.onload = function() { 
     DisplayData();  
 }
 
+// variables to store the data
 let fullname;
 let designation;
 let company;
@@ -14,6 +16,7 @@ let address;
 function GetCurrentUrl() {
     var url = window.location.href;
     console.log(url);
+
     // get url parameters
     var urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
@@ -21,6 +24,7 @@ function GetCurrentUrl() {
     // decode the data
     data = urlParams.get('data');
     data = atob(data);
+
     // assign the data to the variables 
     fname = data.split('&')[0].split('=')[1];
     lname = data.split('&')[1].split('=')[1];
@@ -32,7 +36,7 @@ function GetCurrentUrl() {
     address = data.split('&')[6].split('=')[1];
 }
 
-
+//  function to display the data
 function DisplayData(){
     GetCurrentUrl();
     document.getElementById("name").innerHTML = fullname;
@@ -53,8 +57,6 @@ function ToEmail(){
     window.open("mailto:"+email);
 }
 
-// 
-
 // function on click uses address and prompts to open in maps
 function GoToLocation(){
     window.open("https://www.google.com/maps/search/?api=1&query="+address);
@@ -63,9 +65,9 @@ function GoToLocation(){
 // function to create vcard and save it
 function CreateVcard(){
     var vcard = "BEGIN:VCARD\nVERSION:3.0\nN:"+lname+";"+fname+"\nFN:"+fullname+"\nORG:"+company+"\nTITLE:"+designation+"\nTEL;TYPE=WORK,VOICE:"+phone+"\nADR;TYPE=WORK:;;"+address+"\nEMAIL:"+email+"\nEND:VCARD";
-    var blob = new Blob([vcard], {type: "text/vcard"});
-    var link = document.createElement('a'); 
-    link.href = window.URL.createObjectURL(blob);
-    link.download = fullname+".vcf";
-    link.click();
+    var blob = new Blob([vcard], {type: "text/vcard"}); //Covert to Blob to save
+    var link = document.createElement('a');  // Create a link to download
+    link.href = window.URL.createObjectURL(blob); // Create a link to the file
+    link.download = fullname+".vcf"; // Set the file name
+    link.click(); // Download the file
 }

@@ -14,13 +14,12 @@ function generateQRCode() {
   
     // Create a string to store data in URL format
     const data = `fname=${fname}&lname=${lname}&designation=${designation}&company=${company}&phone=${phone}&email=${email}&address=${address}`;
-    // const data = `fname=${fname}&lname=${lname}&designation=${designation}&company=${company}&phone=${phone}&email=${email}`;
       
     // Generate the QR code
     QRCode.toFile('MyLinkJS2.png', `https://nisarg01-01.github.io/QR-based-Business-Card/?data=${encodeURIComponent(data)}`, {
-      errorCorrectionLevel: 'M',
-      scale: 10,
-      margin: 5
+      errorCorrectionLevel: 'M', // M = 15% error correction
+      scale: 10,  // size of QR code
+      margin: 5  // white space around QR code
     }, function (err) {
       if (err) throw err;
       console.log('QR code generated successfully!');
